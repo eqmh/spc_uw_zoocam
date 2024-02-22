@@ -9,7 +9,7 @@ from keras.preprocessing.image import ImageDataGenerator, img_to_array, load_img
 
 ###############################################
 # SET THE DIRECTORY PATH HERE:
-dir_path = r"D:\NOAA GPU Hackathon\ImageTrainingDataset\Anthomedusae - (Euphysa tentaculata)"
+dir_path = r"PATH TO DIRECTORY OR FOLDER HERE"
 ###############################################
 
 # Function to augment images in a directory
