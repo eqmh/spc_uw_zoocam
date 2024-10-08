@@ -5,7 +5,8 @@
 # ---------------------------------------------
 
 import os
-from keras.preprocessing.image import ImageDataGenerator, img_to_array, load_img
+os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
+from tensorflow.keras.preprocessing.image import ImageDataGenerator, img_to_array, load_img
 
 ###############################################
 # SET THE DIRECTORY PATH HERE:
