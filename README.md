@@ -17,12 +17,15 @@ Run the following lines of code in bold:
 - (base) C:\Users\Deana.Crouser\Documents\Algorithm > **conda create --name zoop_env python=3.12.4**   
 **Note:** If prompted to permit installation of NEW packages, proceed by typing Y   
 - (base) C:\Users\Deana.Crouser\Documents\Algorithm > **conda activate zoop_env**  
-**Note:** When in your virtual environment notice the change from (base) to (zoop_env) preceding the listed directory  
+**Note:** When in your virtual environment notice the change from (base) to (zoop_env) preceding the listed directory   
 - (zoop_env) C:\Users\Deana.Crouser\Documents\Algorithm > **pip install keras**  
 - (zoop_env) C:\Users\Deana.Crouser\Documents\Algorithm > **pip install Keras-Preprocessing**  
 - (zoop_env) C:\Users\Deana.Crouser\Documents\Algorithm > **pip install tensorflow**  
 - (zoop_env) C:\Users\Deana.Crouser\Documents\Algorithm > **pip install h5imagegenerator**    
-- (zoop_env) C:\Users\Deana.Crouser\Documents\Algorithm > **pip install torchvision**    
+- (zoop_env) C:\Users\Deana.Crouser\Documents\Algorithm > **pip install torchvision**  
+- (zoop_env) C:\Users\Deana.Crouser\Documents\Algorithm > **pip install matplotlib**  
+- (zoop_env) C:\Users\Deana.Crouser\Documents\Algorithm > **pip install seaborn**  
+- (zoop_env) C:\Users\Deana.Crouser\Documents\Algorithm > **pip install tqdm**    
 
 # Step1: dataAugmentation.py 
 Run this script in order to expand the provided image dataset and make it more robust (remember the file needs to be unzipped). 
