@@ -32,7 +32,7 @@ If you start with 100 images, you will end with 600 images (500 of which will ha
 Update "dir_path" (line 12) with the correct directory path where you extracted the ImageTrainingDataset. Note that the path you choose for "dir_path" can either be a directory that contains multiple folders OR it can be the PATH to one specific folder you want to augment. Some categories are roubust enough with original images that they do not need to be augmented. Use your descretion to determine which categories require aumentation (ie. rare taxa that have less than a few hundred images). 
 
 To run this script open the Anaconda Promp and cd into the directory where this file is located and then run the script using the python command  
-- (zoop_env) C:\> cd C:\Users\Deana.Crouser\Documents\Algorithm  
+- (zoop_env) C:\ > **cd C:\Users\Deana.Crouser\Documents\Algorithm**    
 - (zoop_env) C:\Users\Deana.Crouser\Documents\Algorithm > **python dataAugmentation.py**    
 
 # Undo: RemoveAugImages.py
