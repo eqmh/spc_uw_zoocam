@@ -5,7 +5,7 @@ Included is a variety of python scripts to aid in augmentation and balancing in 
 # Getting Started
 For best performance, it is recommended that image training datasets consist of augmented and balanced categories in order to avoid algorithm bias. Begin with downloading and extracting the dataset (ImageTrainingDataset.zip) file using the shared drive link provided in the Image Training Dataset Repositories README file.
 
-Using Anaconda Prompt run the following lines of code: 
+Using Anaconda Prompt run the following lines of code:   
 pip install keras  
 pip install Keras-Preprocessing  
 pip install tensorflow  
