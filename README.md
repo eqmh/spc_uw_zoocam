@@ -5,6 +5,12 @@ Included is a variety of python scripts to aid in augmentation and balancing in 
 # Getting Started
 For best performance, it is recommended that image training datasets consist of augmented and balanced categories in order to avoid algorithm bias. Begin with downloading and extracting the dataset (ImageTrainingDataset.zip) file using the shared drive link provided in the Image Training Dataset Repositories README file.
 
+Using Anaconda Prompt run the following lines of code: 
+pip install keras
+pip install Keras-Preprocessing
+pip install tensorflow
+pip install h5imagegenerator
+
 # Step1: dataAugmentation.py 
 Run this script in order to expand the provided image dataset and make it more robust.  
 This script will augment each image 5 different ways (rotate, shear, zoom, flip and brighten).  
@@ -12,10 +18,14 @@ If you start with 100 images, you will end with 600 images (500 of which will ha
 
 Update "dir_path" (line 12) with the correct directory path where you extracted the ImageTrainingDataset. Note that the path you choose for "dir_path" can either be a directory that contains multiple folders OR it can be the PATH to one specific folder you want to augment. Some categories are roubust enough with original images that they do not need to be augmented. Use your descretion to determine which categories require aumentation (ie. rare taxa that have less than a few hundred images). 
 
+To run this script, open the Anaconda Promp, cd into the direcotry where this file is located (cd C:\Users\Deana.Crouser\Documents\Algorithm), and run the script using python command (python dataAugmentation.py)
+
 # Undo: RemoveAugImages.py
 Run this script if you need to remove augmented images from an image dataset.  
 
 Update "dir_name" (line 12) with the correct directory path where you want to remove augmented images from. Note that the path you choose for "dir_name" can either be a directory that contains multiple folders OR it can be the PATH to one specific folder you want to remove augmented images from.
+
+To run this script, open the Anaconda Promp, cd into the direcotry where this file is located (cd C:\Users\Deana.Crouser\Documents\Algorithm), and run the script using python command (python RemoveAugImages.py)
 
 # Step2: RandomImageSelection_1.2.py
 Run this scrip after dataAugmentation.py in order to create a balanced training dataset.
@@ -26,7 +36,6 @@ For example, in the Image Training Dataset, Anthomedusae - (Euphysa tentaculata)
 
 Update "source" and "destPath" on lines 15-16 with correct directory path. 
 
-
-
+To run this script, open the Anaconda Promp, cd into the direcotry where this file is located (cd C:\Users\Deana.Crouser\Documents\Algorithm), and run the script using python command (python RandomImageSelection_1.2.py)
 
 
