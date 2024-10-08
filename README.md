@@ -22,20 +22,18 @@ If you start with 100 images, you will end with 600 images (500 of which will ha
 
 Update "dir_path" (line 12) with the correct directory path where you extracted the ImageTrainingDataset. Note that the path you choose for "dir_path" can either be a directory that contains multiple folders OR it can be the PATH to one specific folder you want to augment. Some categories are roubust enough with original images that they do not need to be augmented. Use your descretion to determine which categories require aumentation (ie. rare taxa that have less than a few hundred images). 
 
-To run this script open the Anaconda Promp and cd into the direcotry where this file is located  
+To run this script open the Anaconda Promp and cd into the direcotry where this file is located and then run the script using the python command  
 - (base) C:\> cd C:\Users\Deana.Crouser\Documents\Algorithm  
-Then run the script using the python command 
-- (base) C:\Users\Deana.Crouser\Documents\Algorithm>python dataAugmentation.py  
+- (base) C:\Users\Deana.Crouser\Documents\Algorithm> python dataAugmentation.py  
 
 # Undo: RemoveAugImages.py
 Run this script if you need to remove augmented images from an image dataset.  
 
 Update "dir_name" (line 12) with the correct directory path where you want to remove augmented images from. Note that the path you choose for "dir_name" can either be a directory that contains multiple folders OR it can be the PATH to one specific folder you want to remove augmented images from.
 
-To run this script open the Anaconda Promp and cd into the direcotry where this file is located  
-- (base) C:\> cd C:\Users\Deana.Crouser\Documents\Algorithm
-Then run the script using the python command  
-- (base) C:\Users\Deana.Crouser\Documents\Algorithm>python RemoveAugImages.py 
+To run this script open the Anaconda Promp and cd into the direcotry where this file is located and then run the script using the python command  
+- (base) C:\> cd C:\Users\Deana.Crouser\Documents\Algorithm 
+- (base) C:\Users\Deana.Crouser\Documents\Algorithm> python RemoveAugImages.py 
 
 # Step2: RandomImageSelection_1.2.py
 Run this scrip after dataAugmentation.py in order to create a balanced training dataset.
@@ -46,8 +44,7 @@ For example, in the Image Training Dataset, Anthomedusae - (Euphysa tentaculata)
 
 Update "source" and "destPath" on lines 15-16 with correct directory path. 
 
-To run this script open the Anaconda Promp, cd into the direcotry where this file is located  
-- (base) C:\>cd C:\Users\Deana.Crouser\Documents\Algorithm  
-Then run the script using the python command  
-- (base) C:\Users\Deana.Crouser\Documents\Algorithm>python RandomImageSelection_1.2.py  
+To run this script open the Anaconda Promp and cd into the direcotry where this file is located and then run the script using the python command   
+- (base) C:\> cd C:\Users\Deana.Crouser\Documents\Algorithm  
+- (base) C:\Users\Deana.Crouser\Documents\Algorithm> python RandomImageSelection_1.2.py  
 
