@@ -14,6 +14,7 @@ pip install keras
 pip install Keras-Preprocessing  
 pip install tensorflow  
 pip install h5imagegenerator  
+pip install torchvision  
 
 # Step1: dataAugmentation.py 
 Run this script in order to expand the provided image dataset and make it more robust (remember the file needs to be unzipped). 
