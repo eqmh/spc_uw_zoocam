@@ -1,9 +1,9 @@
 # ---------------------------------------------
 # THIS CODE WAS CREATED TO AUGMENT IMAGES / EXPAND IMAGE DATASETS
-# LAST UPDATED ON 2/22/2024 BY: DEANA CROUSER
+# LAST UPDATED ON 10/8/2024 BY: DEANA CROUSER
 # CONTACT: DEANACROUSER@GMAIL.COM
 # ---------------------------------------------
-
+from PIL import Image, ImageFilter
 import os
 os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 from tensorflow.keras.preprocessing.image import ImageDataGenerator, img_to_array, load_img
