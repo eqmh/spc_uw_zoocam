@@ -10,7 +10,7 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator, img_to_arra
 
 ###############################################
 # SET THE DIRECTORY PATH HERE:
-dir_path = r"PATH TO DIRECTORY OR FOLDER HERE"
+dir_path = r"/Users/enrique.montes/Desktop/uw_classifier/augmented_categories/"
 ###############################################
 
 # Function to augment images in a directory

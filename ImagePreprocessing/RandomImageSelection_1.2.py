@@ -12,8 +12,8 @@ import shutil
 
 ##############################################################################
 # identify source and destination path for images to be copied to and from
-source = r"PATH\ImageTrainingDataset"
-destPath = r"PATH\ImageTrainingDataset_Balanced"
+source = r"/Users/enrique.montes/Desktop/uw_classifier/augmented_categories/"
+destPath = r"/Users/enrique.montes/Desktop/uw_classifier/randomized_sfer_balanced/"
 ##############################################################################
 
 # RUN THROUGH EACH SUBDIRECTORY IN THE SOURCE DIRECTORY
@@ -40,7 +40,7 @@ for root, subdirectories, files in os.walk(source):
             print(file_count)
 
             # PRINT RANDOM FILES FROM FILES_LIST TO BE COPIED
-            filesToCopy = random.sample(files_list, 200) # SET NUMER OF RANDOM IMAGES HERE
+            filesToCopy = random.sample(files_list, 150) # SET NUMER OF RANDOM IMAGES HERE (200 IN ORIGINAL CODE)
             print(filesToCopy)
 
             # CREATE A FINAL DESTINATION PATH BASED ON THE SUBDIRETORY NAME

@@ -9,7 +9,7 @@ import os
 
 ###############################################
 # SET THE DIRECTORY PATH HERE:
-dir_name = r"D:\NOAA GPU Hackathon\ImageTrainingDataset"
+dir_name = r"/Users/enrique.montes/Desktop/uw_classifier/selected_per_class"
 ###############################################
 
 # Function to remove augmented images from a directory
