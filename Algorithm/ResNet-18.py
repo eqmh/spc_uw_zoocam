@@ -29,7 +29,7 @@ plt.ion()   # interactive mode
 
 #########################################
 # update folder path here:
-folder_path = r'/Users/enrique.montes/Desktop/uw_classifier/randomized_sfer_balanced/'
+folder_path = r'/Users/enrique.montes/Desktop/uw_classifier/randomized_balanced/'
 ##########################################
 
 model_name = folder_path.replace("/", "")  # Creating model name based on folder path
