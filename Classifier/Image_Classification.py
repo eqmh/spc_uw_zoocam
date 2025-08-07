@@ -16,9 +16,9 @@ if __name__ == '__main__':
 
     #####################################
     # Input location & output directory
-    unclassified_location = r"PATH"
-    out_dir = r"PATH\Classified_Output"
-    model_location = r'PATH\model.pth'
+    unclassified_location = r"/Users/enrique.montes/Desktop/uw_classifier/unclassified_dataset/"
+    out_dir = r"/Users/enrique.montes/Desktop/uw_classifier/classified_output/"
+    model_location = r"/Users/enrique.montes/Desktop/uw_classifier/models/2025_08_05/Usersenrique.montesDesktopuw_classifierrandomized_balanced_model.pth"
     #####################################
 
     # Check if CUDA is available
@@ -87,25 +87,29 @@ if __name__ == '__main__':
 
     # Define class names for prediction outputs
     print('defining class names for prediction outputs...')
-    class_names = ['Anthomedusae - (Euphysa tentaculata)', 'Calanoida - (Acartia spp.)', 'Calanoida - (Calanus sp.)',
-                   'Calanoida - (Centropages abdominalis)', 'Calanoida - (Metridia spp.)',
-                   'Calanoida - (Psudo Micro Para)',
-                   'Chaetognatha', 'ClusteredSnow', 'Copepoda - (nauplii)', 'Cyclopoida - (Oithona spp.)',
-                   'Cydippida - (Euplokamis dunlapae)',
-                   'Cydippida - (Pleurobrachia bachei)', 'Cydippida - (Unknown)',
-                   'Cyphocaridae - (Cyphocaris challengeri)',
-                   'Decapoda - Caridea (Shrimp)', 'Diatoms', 'Dinoflagellata - (Noctiluca)', 'Eggs',
-                   'Euphausiacea - Euphausiidae (Krill)',
-                   'Filament_Filaments', 'Fish_larvae', 'Gammeridea- (possibly Calliopius sp)',
-                   'Harpacticoida - (Microsetella rosea)',
-                   'Hyperiidea - (Themisto pacifica _ Hyperoche sp.)', 'Larvacea - (Oikopleura dioica)', 'Lobata',
-                   'MarineSnow',
-                   'Ostracoda - (Halocyprididae)', 'Poecilostomatoida - (Ditrichocoryceaus anglicus)',
-                   'Poecilostomatoida - (Triconia spp.)',
-                   'Pteropoda - (Clione limacina)', 'Pteropoda - (Limacina helicina)',
-                   'Siphonophore - Calycophorae (Muggiaea atlantica)',
-                   'Trachymedusae - (Aglantha digitale)', 'Trachymedusae - (Pantachogon haeckeli)',
-                   'Trachymedusae - (young)', 'Unknown']
+    # class_names = ['Anthomedusae - (Euphysa tentaculata)', 'Calanoida - (Acartia spp.)', 'Calanoida - (Calanus sp.)',
+    #                'Calanoida - (Centropages abdominalis)', 'Calanoida - (Metridia spp.)',
+    #                'Calanoida - (Psudo Micro Para)',
+    #                'Chaetognatha', 'ClusteredSnow', 'Copepoda - (nauplii)', 'Cyclopoida - (Oithona spp.)',
+    #                'Cydippida - (Euplokamis dunlapae)',
+    #                'Cydippida - (Pleurobrachia bachei)', 'Cydippida - (Unknown)',
+    #                'Cyphocaridae - (Cyphocaris challengeri)',
+    #                'Decapoda - Caridea (Shrimp)', 'Diatoms', 'Dinoflagellata - (Noctiluca)', 'Eggs',
+    #                'Euphausiacea - Euphausiidae (Krill)',
+    #                'Filament_Filaments', 'Fish_larvae', 'Gammeridea- (possibly Calliopius sp)',
+    #                'Harpacticoida - (Microsetella rosea)',
+    #                'Hyperiidea - (Themisto pacifica _ Hyperoche sp.)', 'Larvacea - (Oikopleura dioica)', 'Lobata',
+    #                'MarineSnow',
+    #                'Ostracoda - (Halocyprididae)', 'Poecilostomatoida - (Ditrichocoryceaus anglicus)',
+    #                'Poecilostomatoida - (Triconia spp.)',
+    #                'Pteropoda - (Clione limacina)', 'Pteropoda - (Limacina helicina)',
+    #                'Siphonophore - Calycophorae (Muggiaea atlantica)',
+    #                'Trachymedusae - (Aglantha digitale)', 'Trachymedusae - (Pantachogon haeckeli)',
+    #                'Trachymedusae - (young)', 'Unknown']
+
+    class_names = ['Acantharea', 'Centric', 'Ceratium', 'Chaetoceros', 'Chaetognaths', 'Chain2', 'Chain3',
+                   'Copepods', 'Decapods', 'Detritus','Echinoderms', 'Guinardia', 'Jellies', 'Jellies_2','Larvaceans',
+                   'Nauplia','Neocalyptrella', 'Noctiluca', 'Ostracods', 'Polychaets', 'Pteropods', 'Tricho', 'bubbles', 'pellets']
 
     # Run Inference
     print("running inference...")
@@ -181,13 +185,16 @@ if __name__ == '__main__':
                     image_number = i + batch_number * batch_size  # finds corresponding name for the file
                     file_loc = file_paths[image_number]
                     filename = file_paths[image_number].split("/")[-1]
-                    unix = get_unix(filename)
-                    date_time = datetime.utcfromtimestamp(unix).strftime('%Y-%m-%d %H:%M:%S')
+                    # unix = get_unix(filename) # # Pieter's fix
+                    # date_time = datetime.utcfromtimestamp(unix).strftime('%Y-%m-%d %H:%M:%S') # Pieter's fix
+                    date_time = pd.to_datetime(filename[:19], format='%Y%m%d_%H%M%S.%f')  # Pieter's addition
                     x, y, w, h, shape = get_contours(file_loc)
                     df_data.append({
                         "file_name": filename,
-                        "date": date_time.split(" ")[0],
-                        "time": date_time.split(" ")[1],
+                        # "date": date_time.split(" ")[0], # Pieter's fix
+                        # "time": date_time.split(" ")[1], # Pieter's fix
+                        "date": date_time.date(),  # Pieter's addition
+                        "time": date_time.time(),  # Pieter's addition
                         "predicted_class": class_names[int(inf)],
                         "x": x,
                         "y": y,
