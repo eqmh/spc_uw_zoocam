@@ -18,7 +18,7 @@ if __name__ == '__main__':
     # Input location & output directory
     unclassified_location = r"/Users/enrique.montes/Desktop/uw_classifier/unclassified_dataset/"
     out_dir = r"/Users/enrique.montes/Desktop/uw_classifier/classified_output/"
-    model_location = r"/Users/enrique.montes/Desktop/uw_classifier/models/2025_08_05/Usersenrique.montesDesktopuw_classifierrandomized_balanced_model.pth"
+    model_location = r"/Users/enrique.montes/Desktop/uw_classifier/models/resnet50_2025_08_07/Usersenrique.montesDesktopuw_classifierrandomized_balanced_model.pth"
     #####################################
 
     # Check if CUDA is available
