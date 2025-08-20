@@ -40,7 +40,7 @@ for root, subdirectories, files in os.walk(source):
             print(file_count)
 
             # PRINT RANDOM FILES FROM FILES_LIST TO BE COPIED
-            filesToCopy = random.sample(files_list, 300) # SET NUMER OF RANDOM IMAGES HERE (200 IN ORIGINAL CODE)
+            filesToCopy = random.sample(files_list, 250) # SET NUMER OF RANDOM IMAGES HERE (200 IN ORIGINAL CODE)
             print(filesToCopy)
 
             # CREATE A FINAL DESTINATION PATH BASED ON THE SUBDIRETORY NAME
